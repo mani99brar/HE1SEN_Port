@@ -1,0 +1,1201 @@
+@font-face {
+    font-family: manga;
+    src: url(./fonts/manga.ttf);
+}
+@font-face {
+    font-family: bleach;
+    src: url(./fonts/disast.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+h1{
+    font-family: manga;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: #222;
+    overflow: hidden;
+    z-index: -10;
+}
+.background .luffy,.aot,.ladki,.chainsaw,.naruto,.tan,.zoro{
+    width: 12%;
+    position: absolute;
+    transform: scale(1.6) translateZ(100px);
+    opacity: 1;
+
+}
+.background .luffy,.aot,.ladki,.tan{
+    animation: scale 1s ease-in-out 1.2s 1 forwards;
+
+}
+@keyframes scale {
+    0%{
+        z-index: 10;
+        opacity: 1;
+        transform: scale(1.6) translateZ(100px);
+    }
+    100%{
+        z-index: -10;
+        opacity: 0.3;
+        transform: scale(1) translateZ(0px);
+    }
+}
+
+
+.background .luffy{
+    bottom: 0;
+    width: 16%;
+}
+.background .aot{
+    top: 100px;
+    left: 100px;
+}
+.ladki{
+    bottom: 0;
+    right: 200px;
+}
+.chainsaw{
+    transform: rotate(-30deg) scale(1.6) translateZ(100px);
+    top: 50px;
+    /* z-index: 2; */
+    right: 60px;
+    animation: chainsaw 1s ease-in-out 1.2s 1 forwards;
+}
+@keyframes chainsaw {
+    0%{
+        z-index: 10;
+        opacity: 1;
+        transform: rotate(-30deg) scale(1.6) translateZ(100px);
+    }
+    100%{
+        z-index: -10;
+        opacity: 0.3;
+        transform: rotate(-30deg) scale(1) translateZ(0px);
+    }
+}
+.naruto{
+    /* top: 20px; */
+    left: 30%;
+    transform: rotate(-180deg) scale(1.6) translateZ(100px);
+    animation: naruto 1s ease-in-out 1.2s 1 forwards;
+}
+@keyframes naruto {
+    0%{
+        z-index: 10;
+        opacity: 1;
+        transform: rotate(-180deg) scale(1.6) translateZ(100px);
+    }
+    100%{
+        z-index: -10;
+        opacity: 0.3;
+        transform: rotate(-180deg) scale(1) translateZ(0px);
+    }
+}
+a{
+    text-decoration: none;
+}
+.header li{
+    cursor: pointer;
+}
+.header a{
+    color: #fff;
+}
+.tan{
+    bottom: 0;
+    opacity: 1;
+    width: 8%;
+    right: 50%;
+}
+.zoro{
+    top: 40%;
+    right: -30px;
+    transform: rotate(-90deg) scale(1.6) translateZ(100px);
+    animation: zoro 1s ease-in-out 1.2s 1 forwards;
+}
+@keyframes zoro {
+    0%{
+        z-index: 10;
+        opacity: 1;
+        transform: rotate(-90deg) scale(1.6) translateZ(100px);
+    }
+    100%{
+        z-index: -1;
+        opacity: 0.3;
+        transform: rotate(-90deg) scale(1) translateZ(0px);
+    }
+}
+#wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0);
+    z-index: 5;
+    animation: zoom 1s linear 1.2s 1 forwards;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0.95);
+    }
+}
+.header{
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    justify-content: center;
+}
+.con{
+    width: 80%;
+}
+.header ul{
+    display: flex;
+    color: #fff;
+    width: 30%;
+    /* margin-top: 10px; */
+    font-family: bleach;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+}
+
+.mid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+  transition: opacity 0.5s ease-out, height 0.5s ease-out;
+  /* height: 100%; */
+}
+.mid .left{
+    margin-top: 40px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mid .left .about{
+    background-color: #000;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    padding: 40px 20px;
+    font-family: bleach;
+    letter-spacing: 2px;
+}
+.mid .left .icons{
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+    justify-content: center;
+}
+.mid .left .icons .outer{
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    background-color: #222;
+}
+.mid .left .icons .outer div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.mid .left .icons div i{
+    font-size: 2.4rem;
+}
+.meImgCon{
+    width: 74%;
+    /* height: 40%; */
+    display: flex;
+    padding: 0px 50px;
+    transform: translateX(-40px);
+    z-index: 1;
+    justify-content: end;
+}
+.name{
+    margin: 20px 0px;
+    position: relative;
+    width: 60%;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name .front{
+    color: #fff;
+    font-size: 3rem;
+    /* width: 50%; */
+    /* position: absolute; */
+}
+.name .nameback1{
+    position: absolute;
+    width: 60%;
+    left: 0;
+    top: -30px;
+    /* opacity: 0.3; */
+    z-index: -1;
+}
+.name .nameback2{
+    position: absolute;
+    width: 66%;
+    left: 0;
+    bottom: -50px;
+    /* opacity: 0.3; */
+    z-index: -1;
+}
+.name .back{
+    font-size: 4rem;
+    z-index: -1;
+    right: 100px;
+    font-weight: 1000;
+    color: #111;
+    position: absolute;
+    width: 80%;
+}
+
+.name span{
+    margin-right: 100px;
+}
+
+.mid .con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mid .right{
+    width: 50%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* position: relative;
+    top: -40px; */
+    height: 100%;
+}
+.mid .right .meImgCon img{
+    width: 100%;
+    z-index: 1;
+    scale: 1.25;
+   position: relative;
+   
+   right: 30px;
+
+}
+.mid .right .content{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    
+   
+}
+.mid .content section{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #000;
+    height: 100%;
+    /* padding: 50px 0px; */
+    display: flex;
+    justify-content: space-evenly;  
+    align-items: center;
+}
+.mid .content .outer{
+    width: 72%;
+    height: 100%;
+    /* background-color: #000; */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    flex-direction: column;
+}
+#midname{
+    background-color: #000;
+
+}
+.mid .content .outer h1{
+    margin-top: 20px;
+}
+
+.mid .content .outer .box{
+    width: 90%;
+    height: 70%;
+    font-family: bleach;
+}
+.mid .content .outer .box label{
+    margin: 5px;
+}
+.mid .content .outer .box input{
+    padding: 5px;
+}
+.mid .content .outer .box button{
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #fff;
+    color: #000;
+    font-family: bleach;
+    font-size: 1rem;
+    letter-spacing: 5px; 
+    border-radius: 5px;
+}
+.mid .content .outer .box textarea{
+    line-height: 2;
+}
+.mid .content .outer .contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.mid .content .outerl{
+    width: 20%;
+}
+.mid .skills{
+    height: 100%;
+    z-index: 3;
+    width: 17%;
+    position: absolute;
+    right: 0px;
+    color: #fff;
+    /* bottom: 10%; */
+    top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    /* color: #222; */
+    font-family: bleach;
+    background-color: #000;
+}
+.mid .skills>div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.mid .skills a{
+    color: #fff;
+}
+
+.skills section{
+    display: flex;
+    height: 85%;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+.skills section h3{
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.skills section h3 span{
+    border-bottom: solid;
+    border-bottom-color: #666;
+    padding-bottom: 4px;
+}
+.skills .skillp{
+    margin-bottom: 40px;
+}
+.skills .skillp p{
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+
+.aboutDiv{
+    z-index: -1;
+    /* display: none; */
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+}
+.aboutDiv .left0{
+    width: 30%;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aboutDiv .left div{
+    width: 100%;
+    /* background-color: #000; */
+    display: flex;
+    justify-content: center;
+}
+.aboutDiv .left #abname{
+    padding: 20px;
+    background-color: #000;
+}
+.aboutDiv .left div img{
+    width: 80%;
+}
+.aboutDiv .left div #meImgAbout{
+    position: relative;
+    transition: all 1s cubic-bezier(0.5, 0, 0.5, 1.275);
+    scale: 1.2;
+}
+
+.linkto{
+    color: #fff;
+}
+.aboutDiv .rightO{
+    width: 60%;
+    background-color: #fff;
+    border: solid 6px;
+    overflow: scroll;
+    max-height: 86vh;       
+    transform: translateY(40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding-top: 2000px; */
+}
+.aboutDiv .rightO::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+
+.aboutManga{
+    padding-top: 1900px;
+}
+.aboutDiv .rightO .page1{
+    width: 60%;
+    border: solid 3px;
+    position: relative;
+    margin: 20px 0px;
+    padding: 20px 0px;
+
+}
+.aboutDiv .rightO .page1 div{
+    width: 100%;
+    display: flex;
+    /* justify-content: flex-end; */
+}
+.aboutDiv .rightO .page1 div h1{
+    width: 30%;
+    right: -10px;
+    font-size: 3rem;
+    position: relative;
+    letter-spacing: 8px;
+    /* right: 30px; */
+    margin: 20px 0px;
+    /* background-color: #fff; */
+    padding: 5px;
+}
+.aboutDiv .rightO .page1 div p{
+    font-size: 2rem;
+    font-family: bleach;
+    text-align: center;
+    position: relative;
+    left: 40px;
+    margin-right: 20px;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+.aboutDiv .rightO .page1 img{
+    /* z-index: -1; */
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+#aboutDiv .con{
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutDiv .page2{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border: solid 3px;
+}
+.aboutDiv .page2 .left{
+    width: 60%;
+    position: relative;
+    height: 200px;
+}
+.aboutDiv .page2 .left h1{
+    z-index: 1;
+    transform: translateX(40px) translateY(-60px);
+}
+.aboutDiv .page2 .left img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.aboutDiv .page2 .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    width: 40%;
+}
+.aboutDiv .page2 .right div{
+    border: solid 3px;
+    background-color: #000;
+    color: #fff;
+    /* letter-spacing: 2px; */
+    margin: 20px 0px;
+    padding: 10px;
+    font-family: bleach;
+}
+.aboutDiv .page2 .right div div{
+    background-color: #fff;
+    color: #000;
+}
+.aboutDiv .page3{
+    width: 100%;
+    margin: 20px 0px;
+}
+.aboutDiv .page3 .page3con{
+    width: 100%;
+}
+.aboutDiv .page3 .top{
+    width: 90%;
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    border-top: solid 3px;
+    border-right: solid 3px;
+    align-items: center;
+    border-bottom: solid 3px;
+}
+.aboutDiv .page3 .top span{
+    margin-right: 40px;
+}
+.aboutDiv .page3 .bottom{
+    width: 100%;
+    display: flex;
+    font-family: bleach;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.aboutDiv .page3 .bottom .left{
+    width: 30%;
+    padding: 20px;
+    border-top: solid 3px;
+    border-right: solid 3px;
+    border-bottom: solid 3px;
+}
+.aboutDiv .page3 .bottom .left h5{
+    margin-top: 10px;
+    width: 80%;
+    font-size: 1.6rem;
+    text-align: end;
+}
+.aboutDiv .page3 .bottom .right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 3px;
+    border-right: 0px;
+}
+.aboutDiv .page3 .bottom .middle{
+    width: 46%;
+    border: solid 3px;
+    height: 100%;
+}
+.aboutDiv .page3 .bottom .middle img{
+    width: 100%;
+    height: 100%;
+}
+.aboutDiv .page4{
+    width: 80%;
+    border: solid 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: bleach;
+    margin-bottom: 40px;
+}
+.aboutDiv .page4 span{
+    margin-right: 40px;
+}
+.aboutDiv .page4 h5{
+    width: 90%;
+    font-size: 2rem;
+    text-align: end;
+}
+.aboutDiv .navigate{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 20px;
+}
+
+.aboutManga{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navigate p{
+    font-family: manga;
+    font-size: 1.2rem;
+}
+.navigate #leftArr{
+    opacity: 0;
+}
+.skillManga{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spage1{
+    width: 80%;
+    border: solid 3px;
+    margin: 20px 0px;
+    position: relative;
+}
+.spage1 h1{
+    font-size: 3rem;
+    width: 34%;
+    text-align: center;
+    /* text-align: center; */
+    transform: rotate(-45deg) translateY(-36px) translateX(-60px);
+    padding: 10px;
+    background-color: #fff;
+}
+.spage1 div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.spage1 div p{
+    position: relative;
+    text-align: center;
+    top: -30px;
+    font-family: bleach;
+    font-size: 2rem;
+}
+.spage1 div p:last-child {
+    letter-spacing: 4px;
+    font-size: 3rem;
+    background-color: #000;
+    color: #fff;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    font-family: manga;
+}
+.spage2{
+    width: 100%;
+    position: relative;
+    margin: 20px 0px;
+    display: flex;
+    /* justify-content: space-around; */
+}
+.spage2 .sleft{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.spage2 .sleft .stop{
+    width: 100%;
+    border: solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: bleach;
+    padding: 20px 0px;
+    /* letter-spacing: 6rem; */
+    border-left: 0px;
+}
+.spage2 .sleft .sbot{
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.spage2 .sleft .sbot img{
+    width: 40px;
+
+}
+.spage2 .sleft .sbot div{
+    padding: 20px 0px;
+    width: 40%;
+    border: solid 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 2.6rem;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.spage2 .sright{
+    width: 50%;
+    border: solid 3px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: bleach;
+    margin-left: 20px;
+}
+.spage3{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.spage3 .sleft{
+    width: 75%;
+     border: solid 3px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+}
+.spage3 .sright{
+    width: 20%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid 3px;
+}
+.spage3 .blockchainImg{
+    display: flex;
+    margin-top: 40px;
+    width: 80%;
+    justify-content: space-around;
+    /* width: 30px; */
+}
+.spage3 .blockchainImg img{
+    width: 60px;
+    height: 50px;
+}
+.spage3 section{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.spage3 p{
+    width: 90%;
+    padding: 20px;
+    font-family: bleach;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+.loading{
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    /* background-color: #000; */
+    position: absolute;
+    display: flex;
+    color: #fff;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    /* animation: hide 4s ease-in-out 2s 1 forwards; */
+    animation: fadel 1s ease-in-out 0.5s 1 forwards;
+
+}
+@keyframes hide {
+    0%{
+        transform: scale(1);
+        z-index: 5;
+    }
+    100%{
+        transform: scale(0);
+        z-index: -5;
+    }
+}
+
+.blackbox{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    transform: scale(1);
+    z-index: -1;
+}
+@keyframes fadel {
+    0%{
+        opacity: 1;
+        z-index: 5;
+    }
+    
+    100%{
+        opacity: 0;
+        z-index: -1;
+        /* transform: scale(0); */
+    }
+}
+
+
+.mobmid{
+    width: 100%;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    /* overflow: hidden; */
+    align-items: center;
+}
+#mob1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#mob2{
+    display: flex;
+    width: calc(105% + 4px);
+    align-items: center;
+    background-color: #222;
+    /* height: 80vh; */
+    justify-content: center;
+}
+#mob2 .mobcon{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+    margin: 50px 0px;
+
+    background-color: #000;
+}
+#mob2 .mobcon .top{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#mob2 .mobcon .top .left{
+    width: 40%;
+    color: #fff;
+
+}
+#mob2 .mobcon .top .left h1{
+    font-size: 2.6rem;
+}
+#mob2 h1 span,#mob2 h3 span{
+    
+    border-bottom: solid;
+    border-color: #666;
+    padding-bottom: 5px;
+    margin: 0;
+}
+#mob2 .mobskill{
+    margin-top: 40px;
+}
+#mob2 .mobskill h3{
+    font-family: bleach;
+    color: #fff;
+}
+#mob2 .mobskill p{
+    margin-top: 20px;
+    font-family: bleach;
+    display: flex;
+    flex-wrap: wrap;
+}
+#mob2 .mobskill p span{
+    margin-right: 20px;
+    margin-top: 24px;
+}
+
+
+#mob2 .mobcon .top .right{
+    width: 55%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+}
+#mob2 .mobcon .top .right p{
+    color: #000;
+    font-family: bleach;
+}
+#mob2 .mobcon .bottom{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #fff;
+}
+
+
+.mobmid img{
+    width: 100%;
+}
+.mobmid .mobme{
+    width: 50%;
+}
+.mobmid .mobme{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.mobmid .mobme h1{
+    width: 60%;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 3rem;
+}
+.mobmid h1 span{
+    margin-left: 20px;
+    
+}
+.mobmid .mobnamediv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mobcontact{
+    width: 30%;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+.mobcontact h5{
+    font-family: bleach;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.mobcontact input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+}
+.mobcontact button{
+    width: 80px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: bleach;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    border: none;
+}
+.moblinks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+.moblinks div{
+    width: 98%;
+    display: flex;
+    font-size: 3rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.moblinks div i{
+    color: #000;
+}
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+    .meImgCon{
+        width: 100%;
+    }
+    .name{
+        width: 100%;
+    }
+    .mid .left{
+        width: 45%;
+    }
+    .mid .right .content{
+        height: 50%;
+    }
+    .mid .right{
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 1100px){
+    #mid{
+        display: none;
+    }
+    .mobmid{
+        display: flex;
+    }
+    .header ul{
+        padding-bottom: 10px;
+        padding-top: 15px;
+    }
+    .con{
+        width: 90%;
+    }
+    .name .front{
+        font-size: 2rem;
+    }
+    .aboutDiv .rightO{
+        width: 69%;
+    }
+}
+@media only screen and (max-width: 800px){
+    .mobmid .mobme h1{
+        font-size: 2rem;
+    }
+    
+    .aboutDiv .left0{
+        display: none;   
+    }
+    .aboutDiv .rightO{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 650px){
+    .mobcontact{
+        width: 80%;
+        display: flex;
+        /* margin-top: 40px; */
+        justify-content: space-between;
+    }
+    .mobmid .mobme{
+        flex-direction: row;
+        width: 100%;
+    }
+    .conin{
+        width: 70%;
+    }
+    .moblinks div{
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        width: 40%;
+        justify-content: space-around;
+    }
+    .moblinks{
+        width: 30%;
+    }
+    .mobcontact h1{
+        font-size: 1.6rem;
+    }
+    .mobcontact i{
+        font-size: 2rem;
+    }
+    .header ul{
+        width: 50%;
+    }
+    #mob1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .mid .left{
+        width: 44%;
+    }
+    
+    
+    .mid .right .meImgCon img{
+      
+        scale: 1.4px;
+    }
+}
+@media only screen and (max-width: 550px){
+    .aboutManga{
+        padding-top: 2100px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .aboutManga{
+        padding-top: 2500px;
+    }
+}
+@media only screen and (max-width: 450px){
+    .mobmid .mobme h1{
+        width: 70%;
+        text-align: none;
+        font-size: 1.8rem;
+    }
+    .aboutManga{
+        padding-top: 2700px;
+    }
+    .mobmid img{
+        scale: 1.2;
+        z-index: -1;
+    }
+    .mobmid{
+        margin-top: 20px;
+    }
+    .moblinks{
+        width: 40%;
+    }
+    .conin{
+        width: 555;
+    }
+    .moblinks div{
+        width: 60%;
+    }
+    #mob2 .mobcon .top{
+        flex-direction: column;
+    }
+    #mob2 .mobcon .top .left{
+        width: 100%;
+    }
+    #mob2 .mobcon .top .right{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 450px){
+    .aboutManga{
+        /* padding-top: 3000px; */
+        scale: 0.9;
+    }
+
+}

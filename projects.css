@@ -1,0 +1,362 @@
+@font-face {
+    font-family: manga;
+    src: url(./fonts/manga.ttf);
+}
+@font-face {
+    font-family: bleach;
+    src: url(./fonts/disast.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+h1{
+    font-family: manga;
+}
+body::-webkit-scrollbar{
+    width: 0;
+}
+.eff{
+    background-color: #000;
+}
+body{
+    background-color: #000;
+}
+#wrapper{
+    width: 100%;
+    transform: scale(0.95);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+#wrapper::-webkit-scrollbar{
+    width: 0;
+}
+#wrapper .projecthead{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    font-size: 4rem;
+    
+}
+.headP{
+    position: absolute;
+    right: 0;
+    animation: outD 1s ease-out 0s 1 forwards;
+
+}
+
+@keyframes outD {
+    0%{
+        transform: scale(1);
+    }
+    99%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0);
+        display: none;
+    }
+}
+
+#wrapper .projecthead h1{
+    padding: 50px 80px;
+    position: relative;
+    right: 10px;
+}
+.projecthead .top,.projecthead .bottom{
+    height: 10px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+}
+.projecthead .top{
+    top: 0;
+    transform: translateX(110%);
+    animation: headleft 6s linear 0s infinite;
+}
+
+@keyframes headleft {
+    0%{
+        transform: translateX(110%);
+    }
+    25%{
+        transform: translateX(-110%)
+    }
+    100%{
+        transform: translateX(-110%);
+    }
+}
+
+.projecthead .bottom{
+    bottom: 0;
+    transform: translateX(-110%);
+    animation: headright 6s linear 0s infinite;
+}
+
+@keyframes headright {
+    0%{
+        transform: translateX(-110%);
+    }
+    50%{
+        transform: translateX(-110%);
+    }
+    75%{
+        transform: translateX(110%);
+    }
+    100%{
+        transform: translateX(110%);
+    }
+}
+
+.projecthead .left,.projecthead .right{
+    width: 10px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+}
+@keyframes headdown {
+    0%{
+        transform: translateY(-110%);
+    }
+    25%{
+        transform: translateY(-110%);
+    }
+    50%{
+        transform: translateY(110%);
+    }
+    75%{
+        transform: translateY(110%);
+    }
+    100%{
+        transform: translateY(110%);
+    }
+}
+
+
+.projecthead .left{
+    left: 0;
+    transform: translateY(-110%);
+    animation: headdown 6s linear 0s infinite;
+}
+.projecthead .right{
+    right: 0;
+    transform: translateY(110%);
+    animation: headup 6s linear 0s infinite;
+}
+@keyframes headup{
+    0%{
+        transform: translateY(110%);
+    }
+    75%{
+        transform: translateY(110%);
+    }
+    100%{
+        transform: translateY(-110%);
+    }
+}
+
+.projCon{
+    width: 90%;
+    height: 90vh;
+    position: absolute;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.projCon .card{
+    width: 30%;
+    border: solid #fff 3px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+}
+.card h1{
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+}
+.card .usedSkill{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.card i{
+    padding: 10px 0px;
+    font-size: 2rem;
+}
+.card p{
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: bleach;
+}
+.cardnav{
+    display: flex;
+}
+.cardnav .homenav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardnav .homenav p{
+    color: #fff;
+    font-family: manga;
+    text-decoration: dotted;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+.cardnav .homenav p i{
+    margin-left: 10px;
+    font-size: 1rem;
+}
+.cardnav .github{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardnav .github i{
+    font-size: 2.6rem;
+}
+.allprojs{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.allprojs p{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    color: #000;
+}
+.allprojs div:first-child p{
+    background-color: #000;
+    color: #fff;
+}
+
+.projCon .allcards{
+    display: none;
+}
+.projCon .allcards:first-child{
+    display: flex;
+}
+.github a{
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: manga;
+}
+
+.github .gitlink{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.github .gitlink:first-child{
+    display: flex;
+}
+.allprojs div span{
+    background-color: #fff;
+    position: absolute;
+}
+.allprojs div span:first-child{
+    top: -10px;
+    width: 100%;
+    right: -8px;
+    height: 9px;
+    transform:skewX(-60deg);
+}
+.allprojs div span:last-of-type{
+    right: -15px;
+    top: -4px;
+    width: 14px;
+    height: 64%;
+    transform:skewY(-30deg);
+}
+.allprojs div{
+    cursor: pointer;
+    width: 30%;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.projCon .card,.projCon .card:last-child{
+    transform: scale(0);
+    animation: scaleinto 1s ease-in 0s 1 forwards;
+}
+.mobnav{
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    position: absolute;
+    top: 50px;
+}
+@keyframes scaleinto {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .projCon .card{
+        width: 40%;
+    }
+}
+#mobnav{
+    margin-top: 10px;
+}
+@media only screen and (max-width: 1100px){
+    .cardnav{
+        display: none;
+    }
+    .mobnav{
+        display: flex;
+    }
+    .projCon .card{
+        width: 80%;
+    }
+    .projCon{
+        height: auto;
+    }
+    .github a{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 650px){
+    .mobnav{
+        flex-wrap: wrap;
+        top: 16px;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 2;
+    }
+    
+    .projCon .card{
+        width: 95%;
+        position: relative;
+        top: 50px;
+    
+    }
+}
