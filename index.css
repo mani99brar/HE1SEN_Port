@@ -892,6 +892,11 @@ li{
 #mob2{
     display: flex;
     width: calc(105% + 4px);
+    position: relative;
+    top: -50px;
+    z-index: -1;
+    padding-top: 50px;
+    padding-bottom: 50px;
     align-items: center;
     background-color: #222;
     /* height: 80vh; */
@@ -1103,6 +1108,7 @@ li{
         /* margin-top: 40px; */
         justify-content: space-between;
     }
+    
     .mobmid .mobme{
         flex-direction: row;
         width: 100%;
@@ -1134,8 +1140,17 @@ li{
         flex-direction: column;
         align-items: center;
     }
+    .mobmid .mobnamediv{
+        position: absolute;
+        /* right: 0px; */
+        left: 0px;
+    }
+
 }
 
+#meImgAbout{
+    width: 100%;
+}
 @media only screen and (min-width: 1400px){
     .mid .left{
         width: 44%;
@@ -1199,3 +1214,17 @@ li{
     }
 
 }
+
+@media only screen and (max-height: 550px),screen and (max-height: 700px){
+.aboutManga{
+    padding-top: 2200px;
+}
+
+}
+
+@media only screen and (max-height: 550px),screen and (max-height: 700px){
+    .aboutManga{
+        padding-top: 3000px;
+    }
+    
+    }
