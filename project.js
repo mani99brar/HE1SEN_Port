@@ -4,9 +4,11 @@ let elementsArray = Array.from(elements);
 let mobnav = document.getElementById('mobnav');
 let cardnav = document.getElementById('cardnav');
 
+
 mobnav.addEventListener("click",  async function(){
  
 tArray[curr].style.display="none";
+lmArray[curr].style.display="none";
 cardnav.style.display="flex";
 
 
@@ -17,7 +19,9 @@ let tArray = Array.from(t);
 
 let l = document.querySelectorAll('.gitlink2');
 let lArray = Array.from(l);
-console.log(lArray);
+let l2 = document.querySelectorAll('.git1');
+let lmArray = Array.from(l2);
+
 
 
 elementsArray.forEach(element => {
@@ -44,7 +48,7 @@ elementsArray.forEach(element => {
         curr=index;
         if (screen.width <= 1100  ){
           cardnav.style.display="none";
-  
+          lmArray[index].style.display="flex";
         }
     });
   });
