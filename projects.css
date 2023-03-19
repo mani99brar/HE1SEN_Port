@@ -212,6 +212,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 80%;
+    overflow: scroll;
 }
 .cardnav .homenav p{
     color: #fff;
@@ -357,6 +359,7 @@ body{
         width: 95%;
         position: relative;
         top: 50px;
+        scale: 0.9;
     
     }
 }
