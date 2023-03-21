@@ -213,7 +213,6 @@ body{
     align-items: center;
     justify-content: space-between;
     height: 80%;
-    overflow: scroll;
 }
 .cardnav .homenav p{
     color: #fff;
